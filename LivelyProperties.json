@@ -1,0 +1,27 @@
+{
+  "mode": {
+    "type": "dropdown",
+    "text": "Visualizer",
+    "items": [ "Aurora", "Orb", "Particles" ],
+    "value": 0
+  },
+  "theme": {
+    "type": "dropdown",
+    "text": "Palette",
+    "items": [ "Sunset", "Pink", "Amber", "Violet" ],
+    "value": 0
+  },
+  "sensitivity": {
+    "type": "slider",
+    "text": "Sensitivity",
+    "value": 1,
+    "min": 0.4,
+    "max": 2.5,
+    "step": 0.1
+  },
+  "showControls": {
+    "type": "checkbox",
+    "text": "Show on-screen controls",
+    "value": false
+  }
+}

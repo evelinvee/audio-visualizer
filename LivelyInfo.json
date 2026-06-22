@@ -1,0 +1,17 @@
+{
+  "AppVersion": "1.0.0.0",
+  "Title": "Audio Visualizer",
+  "Thumbnail": "preview-spectrum.png",
+  "Preview": "preview-spectrum.png",
+  "Desc": "Real-time music visualizer that reacts to system audio — Aurora, Orb and Particles.",
+  "Author": "evelinvee",
+  "License": "MIT",
+  "Contact": "https://github.com/evelinvee/audio-wallpaper",
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": " --audio",
+  "IsAbsolutePath": false,
+  "Id": null,
+  "Tags": null,
+  "Version": 0
+}

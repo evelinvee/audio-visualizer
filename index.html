@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Audio Visualizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div class="nowplaying" id="now" aria-live="polite"></div>
+
+  <div class="hint" id="hint">
+    <h1>Audio Visualizer</h1>
+    <p>Load a track or use your microphone, then watch it move.</p>
+  </div>
+
+  <div class="bar" id="bar">
+    <button class="ctl" id="loadBtn" title="Load audio file">
+      <svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12" /><circle cx="6" cy="18" r="3"/><circle cx="19" cy="16" r="3"/></svg>
+      <span>Track</span>
+    </button>
+    <input type="file" id="file" accept="audio/*" hidden />
+
+    <button class="ctl play" id="playBtn" title="Play / pause" disabled>
+      <svg id="playIcon" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg>
+    </button>
+
+    <button class="ctl" id="micBtn" title="Use microphone">
+      <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+      <span>Mic</span>
+    </button>
+
+    <div class="sep"></div>
+
+    <div class="modes" id="modes">
+      <button class="mode active" data-mode="0">Aurora</button>
+      <button class="mode" data-mode="1">Orb</button>
+      <button class="mode" data-mode="2">Particles</button>
+    </div>
+
+    <button class="ctl" id="themeBtn" title="Change colours">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18 4 4 0 0 0 0-8 2 2 0 0 1 0-4 3 3 0 0 0 0-6z"/></svg>
+      <span>Theme</span>
+    </button>
+  </div>
+
+  <audio id="audio" crossorigin="anonymous"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
